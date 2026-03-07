@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth Portal</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="auth-layout">
+      <section class="auth-card">
+        <header class="auth-header">
+          <p class="eyebrow">Secure Access</p>
+          <h1>Welcome Back</h1>
+          <p class="subtitle">Manage your account with a modern authentication experience.</p>
+        </header>
+
+        <div class="tablist" role="tablist" aria-label="Authentication form tabs">
+          <button class="tab is-active" data-mode="login" role="tab" aria-selected="true">Sign in</button>
+          <button class="tab" data-mode="register" role="tab" aria-selected="false">Create account</button>
+        </div>
+
+        <form id="auth-form" class="auth-form" novalidate>
+          <div class="field-row" id="name-row" hidden>
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" />
+          </div>
+
+          <div class="field-row">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+          </div>
+
+          <div class="field-row">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" required />
+          </div>
+
+          <button type="submit" class="cta-btn" id="submit-button">Sign in</button>
+        </form>
+
+        <div class="utility-row">
+          <button id="me-button" class="secondary-btn" type="button">Fetch my profile</button>
+          <button id="clear-button" class="text-btn" type="button">Clear token</button>
+        </div>
+
+        <section class="response-panel" aria-live="polite">
+          <h2>API response</h2>
+          <pre id="response-output">Submit the form to view server response.</pre>
+        </section>
+      </section>
+    </main>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
