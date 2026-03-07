@@ -7,6 +7,7 @@ Production-ready authentication API with:
 - Password hashing with bcrypt
 - Input validation
 - Centralized error handling
+- Polished frontend authentication UI for login/register flows
 
 ## Folder Structure
 
@@ -16,6 +17,7 @@ src/
   controllers/
   middlewares/
   models/
+  public/
   routes/
   utils/
   validators/
@@ -35,6 +37,8 @@ src/
    ```bash
    npm run dev
    ```
+4. Open frontend:
+   - `http://localhost:5000/`
 
 ## API Endpoints
 
